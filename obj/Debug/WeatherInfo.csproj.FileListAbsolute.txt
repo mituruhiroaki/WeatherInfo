@@ -1,0 +1,6 @@
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\bin\Debug\WeatherInfo.dll
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\bin\Debug\WeatherInfo.pdb
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\obj\Debug\WeatherInfo.csprojAssemblyReference.cache
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\obj\Debug\WeatherInfo.csproj.CoreCompileInputs.cache
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\obj\Debug\WeatherInfo.dll
+C:\Users\sekim\OneDrive\デスクトップ\WeatherInfo\obj\Debug\WeatherInfo.pdb
