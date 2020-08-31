@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Net;
 
 namespace WeatherInfo
 {
@@ -19,7 +12,7 @@ namespace WeatherInfo
         #endregion
 
 
-        #region<クラスメソッド,ファンクション>
+        #region<ファンクション>
         public static Func<string> html = () => {
             wc.Encoding = Encoding.UTF8;
             return wc.DownloadString(url);
@@ -32,26 +25,10 @@ namespace WeatherInfo
             string day = today.Substring(3, 2);                           //mm/ddのddを取得
             reg = new Regex($@"(\<th\>{month}月{day}日.*\n\s+.*=.*=)(.*)(\st.*forecast-telop.*)", RegexOptions.None);     //なかなか抽出に至らなかったため、()でグループ化をしてみたら成功
             wc.Encoding = Encoding.UTF8;                                  //Encoding.UTF8でUTF形式にし、文字化けを解消
-            //today = reg.Match(wc.DownloadString(url)).ToString();
             Match m = reg.Match(wc.DownloadString(url));
             todayWeather = m.Groups[2].ToString().Replace("\"", "");      //目的の値が入ったグループ2番目を「"」を削って取得　正規表現では\"を上手く扱うことが出来なかったため、こちらで削除
-            /*
-            today = null;
-            if(m.Success) {
-                foreach(var i in m.Groups) {
-                    today += i.ToString() + "\n";
-                }
-            }
-            */
             return todayWeather;
         };
-
         #endregion
-
-
-        //public static string data = new WebClient().DownloadString(url);
-
-        
-
     }
 }
